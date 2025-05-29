@@ -1,0 +1,288 @@
+
+/* Global Styles */
+:root {
+    --primary-color: #802ba5; /* Purple - Botswana theme */
+    --secondary-color: #f39c12; /* Orange */
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --danger-color: #e74c3c;
+    --success-color: #9a7b9b;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* 1) Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 2) Header & Logo */
+header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo img {
+  height: 50px;
+}
+.logo h1 {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #6a0dad;
+}
+
+/* 3) Navbar */
+nav.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #8e44ad;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-left a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 25px;
+  transition: opacity 0.2s;
+}
+.nav-left a:last-child {
+  margin-right: 0;
+}
+.nav-left a:hover,
+.nav-left a.active {
+  opacity: 0.75;
+}
+
+/* Right-side buttons */
+.nav-right {
+  gap: 15px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 5px;
+  transition: opacity 0.2s;
+}
+.icon-btn:hover {
+  opacity: 0.7;
+}
+.register-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #fff;
+  color: #8e44ad;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.register-btn:hover {
+  opacity: 0.8;
+}
+
+/* Mobile menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  nav.navbar.expanded .nav-left,
+  nav.navbar.expanded .nav-right {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* 4) Hero Banner */
+.hero-banner {
+  background: url('images.html/hero.jpg') no-repeat center/cover;
+  background-color: #8e44ad; /* fallback */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* 5) Stories Section */
+.stories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+.story-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.story-card.reverse-layout {
+  flex-direction: row-reverse;
+}
+.story-content {
+  flex: 1;
+  padding: 20px;
+}
+.story-content h3 {
+  color: #8e44ad;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.story-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.story-meta span {
+  margin-right: 15px;
+}
+.story-image-large {
+  flex: 1;
+  min-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+}
+.story-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 6) Call to Action */
+.share-cta {
+  background: #8e44ad;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+.share-cta .btn {
+  background: #fff;
+  color: #8e44ad;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+  transition: opacity 0.2s;
+}
+.share-cta .btn:hover {
+  opacity: 0.8;
+}
+
+/* 7) Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-section {
+  flex: 1 1 200px;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+}
+.footer-section ul {
+  list-style: none;
+}
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+}
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* 8) Animations */
+.animated { animation-duration: 1s; animation-fill-mode: both; }
+.fadeIn { animation-name: fadeIn; }
+.fadeInUp { animation-name: fadeInUp; }
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 9) Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+body.dark-mode header { background: #1e1e1e; }
+body.dark-mode nav.navbar { background: #333; }
+body.dark-mode .story-card { background: #1e1e1e; }
+body.dark-mode .share-cta { background: #222; }
+body.dark-mode footer { background: #111; }
